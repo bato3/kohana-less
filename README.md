@@ -8,6 +8,7 @@ Instalation
 First enable modile in bootstrap.php
 
 Update config ``lessphp.php``
+
   return array(
     /**
       * default files set
@@ -33,21 +34,25 @@ Update config ``lessphp.php``
      ),
   );
 
+
 Usage
 -----
 
 Default stylesheet from config:
+
   <?=Lessphp::style()?>
   
 Named stylesheet from config:
+
   <?=Lessphp::style('config set name')?>
   
 One or more files:
+
   <?=Lessphp::style('file.less')?>
   <?=Lessphp::style(Array('file.less','file.less'))?>
   
   
-Similar usage in php code
+Similar usage in php code:
+
   $template->stylesheets[] = Lessphp::url();
-  
   $css = Lessphp::compile_file();
